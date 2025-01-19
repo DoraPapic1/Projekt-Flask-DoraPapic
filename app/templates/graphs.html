@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="title">Statistika i Grafovi</h2>
+
+    <div class="graph-container">
+        <h3>Raspodjela prihoda i rashoda</h3>
+        <img src="data:image/png;base64,{{ pie_chart }}" alt="Pie Chart" class="graph-img">
+
+        <h3>Ukupni prihodi i rashodi</h3>
+        <img src="data:image/png;base64,{{ bar_chart }}" alt="Bar Chart" class="graph-img">
+    </div>
+{% endblock %}

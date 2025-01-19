@@ -1,0 +1,259 @@
+/* Globalni stilovi */
+body {
+    font-family: Garamond, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #BFBDB4; /* Svijetla pozadina */
+    color: #0D0D0D; /* Boja slova */
+    line-height: 1.6;
+}
+
+/* Glavni naslovi */
+h1, h2, h3 {
+    color: #0D0D0D; /* Boja za naslove */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Linkovi */
+a {
+    text-decoration: none;
+    color: #BF9999; /* Svijetloružičasta za linkove */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #BFBDB4; /* Svijetlosiva na hover */
+}
+
+/* Header stilovi */
+header {
+    background-color: #BF9999; /* Ružičasta pozadina headera */
+    color: #0D0D0D; /* Boja slova */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #F2F2EB; /* Svijetla boja za naslov */
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header nav a {
+    color: #F2F2EB; /* Svijetla boja za linkove */
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #BFBDB4; /* Svijetlosiva na hover */
+}
+
+/* Glavni kontejner */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #F2F2EB; /* Svijetla pozadina */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    animation: fadeIn 0.8s ease-in-out; /* Animacija za pojavu */
+}
+
+/* Definicija fade-in animacije */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stilovi za formu */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0D0D0D; /* Boja za oznake */
+}
+
+form input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #F2F2EB; /* Svijetla pozadina */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #BF9999; /* Ružičasta na fokus */
+    box-shadow: 0 0 8px rgba(191, 153, 153, 0.5);
+    outline: none;
+}
+
+/* Gumbi */
+button {
+    background-color: #BF9999; /* Ružičasta za gumbe */
+    color: #F2F2EB; /* Bijela za tekst gumba */
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #BFBDB4; /* Svijetlosiva na hover */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Stilovi za specifične akcije */
+.income-title {
+    color: #BFBDB4; /* Svijetlosiva za naslov prihoda */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.expense-title {
+    color: #BF9999; /* Ružičasta za naslov rashoda */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-income {
+    background-color: #BFBDB4; /* Svijetlosiva za gumb prihoda */
+}
+
+.btn-income:hover {
+    background-color: #A67563; /* Tamnija smeđa na hover */
+}
+
+.btn-expense {
+    background-color: #BF9999; /* Ružičasta za gumb rashoda */
+}
+
+.btn-expense:hover {
+    background-color: #A67563; /* Tamnija smeđa na hover */
+}
+
+.btn-delete {
+    background-color: #A67563; /* Tamnosmeđa za gumb "Obriši" */
+    color: #BF9999;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #8C2C16; /* Crvena na hover */
+}
+
+/* Stilovi za listu prihoda i rashoda */
+ul {
+    list-style: none;
+    padding: 0;
+}
+/* Stilovi za gumbe */
+button {
+    background-color: #BF9999; /* Ružičasta za gumbe */
+    color: #F2F2EB; /* Svijetla boja za tekst gumba */
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #D9AB82; /* Zlatna bež na hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Specifičan stil za gumb "Obriši" */
+.btn-delete {
+    background-color: #8C2C16; /* Tamnocrvena za gumb "Obriši" */
+    color: #F2F2EB; /* Svijetla boja za tekst gumba */
+    border-radius: 12px; /* Zaokruženi kutovi */
+}
+
+.btn-delete:hover {
+    background-color: #BF9999; /* Ružičasta na hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+ul li {
+    background: #F2F2EB; /* Svijetla pozadina stavki */
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #D9AB82; /* Zlatna bež na hover */
+}
+
+/* Stilovi za saldo */
+.balance {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0D0D0D; /* Tamnosiva za saldo */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Lagana sjena za efekt */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.graph-container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.graph-container h3 {
+    color: #0D0D0D; /* Tamnosiva za naslove grafova */
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.graph-img {
+    max-width: 90%;
+    height: auto;
+    border: 2px solid #BF9999; /* Ružičasti okvir */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}

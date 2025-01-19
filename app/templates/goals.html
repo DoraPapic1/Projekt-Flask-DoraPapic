@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Ciljevi štednje</h2>
+
+    <form method="POST" class="form">
+        <label for="name">Naziv cilja:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="target_amount">Ciljani iznos (EUR):</label>
+        <input type="number" step="0.01" name="target_amount" id="target_amount" required>
+
+        <label for="deadline">Rok:</label>
+        <input type="date" name="deadline" id="deadline" required>
+
+        <button type="submit" class="btn">Dodaj cilj</button>
+    </form>
+
+    <h3>Postavljeni ciljevi:</h3>
+    <ul class="list">
+        {% for goal in goals %}
+            <li class="list-item">
+                <span>{{ goal.name }} - Cilj: {{ goal.target_amount }} EUR, Ušteđeno: {{ goal.current_amount }} EUR, Rok: {{ goal.deadline }}</span>
+                <form method="POST" action="{{ url_for('main.add_to_goal', goal_id=goal.id) }}" style="display:inline;">
+                    <input type="number" step="0.01" name="amount" placeholder="Dodaj iznos" required>
+                    <button type="submit" class="btn btn-add">Dodaj</button>
+                </form>
+                <form method="POST" action="{{ url_for('main.delete_goal', goal_id=goal.id) }}" style="display:inline;">
+                    <button type="submit" class="btn btn-delete">Obriši</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

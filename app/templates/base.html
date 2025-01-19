@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="mb-4">
+        <h1>Financijsko praćenje</h1>
+        <nav>
+            <a href="{{ url_for('main.home') }}">Početna</a>
+            <a href="{{ url_for('main.add_income') }}">Dodaj prihod</a>
+            <a href="{{ url_for('main.add_expense') }}">Dodaj rashod</a>
+            <a href="{{ url_for('main.goals') }}">Ciljevi štednje</a>
+            <a href="{{ url_for('main.graphs') }}">Grafovi i Statistika</a>
+        </nav>
+    </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
